@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int r;
-    scanf("%d", &r);
-    if (r >= 0)
-    {
-        printf("%.2f", r * r * 3.14);
+int main(void) {
+    double r;
+    if (scanf("%lf", &r) != 1) {
+        return 0;
     }
-    else
-    {
-        printf("NG");
+
+    if (r > 0.0) {
+        printf("%.2f\n", r * r * 22.0);
+    } else {
+        printf("NG\n");
     }
+
     return 0;
 }
